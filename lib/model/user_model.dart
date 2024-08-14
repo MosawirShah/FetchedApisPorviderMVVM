@@ -1,0 +1,15 @@
+class UserModel{
+  String token;
+
+  UserModel({required this.token});
+
+  factory UserModel.fromJson(Map<String,dynamic> json){
+    return UserModel(token: json['token']);
+  }
+
+  Map<String,dynamic> toJson(){
+    return {
+      'token' : token
+    };
+  }
+}
